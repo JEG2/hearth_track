@@ -1,0 +1,36 @@
+// Place all the styles related to the Games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.games {
+
+  table {
+    border-collapse: collapse;
+  }
+
+  table tr td {
+    padding: 5px;
+    vertical-align: top;
+  }
+
+  .game_line_even {
+    background: #e0f8f8;
+  }
+
+  .game_line_odd {
+    background: #f8b0f8;
+  }
+
+  .deck_name {
+    width: 60%;
+
+    dl {
+      margin: 0;
+    }
+
+    dt {
+      color: #244;
+      font-weight: bold;
+    }
+
+  }
+}

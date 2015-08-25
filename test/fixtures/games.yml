@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  deck: MyString
+  opponent_class: MyString
+  did_i_win: false
+
+two:
+  deck: MyString
+  opponent_class: MyString
+  did_i_win: false

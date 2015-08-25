@@ -1,0 +1,28 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:HearthTrack
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+CreateGames	db/migrate/20150824192401_create_games.rb	/^class CreateGames < ActiveRecord::Migration$/;"	c
+Game	app/models/game.rb	/^class Game < ActiveRecord::Base$/;"	c
+GameTest	test/models/game_test.rb	/^class GameTest < ActiveSupport::TestCase$/;"	c
+GamesController	app/controllers/games_controller.rb	/^class GamesController < ApplicationController$/;"	c
+GamesControllerTest	test/controllers/games_controller_test.rb	/^class GamesControllerTest < ActionController::TestCase$/;"	c
+GamesHelper	app/helpers/games_helper.rb	/^module GamesHelper$/;"	m
+GamesHelperTest	test/helpers/games_helper_test.rb	/^class GamesHelperTest < ActionView::TestCase$/;"	c
+HearthTrack	config/application.rb	/^module HearthTrack$/;"	m
+change	db/migrate/20150824192401_create_games.rb	/^  def change$/;"	f	class:CreateGames
+create	app/controllers/games_controller.rb	/^  def create$/;"	f	class:GamesController
+destroy	app/controllers/games_controller.rb	/^  def destroy$/;"	f	class:GamesController
+edit	app/controllers/games_controller.rb	/^  def edit$/;"	f	class:GamesController
+game_params	app/controllers/games_controller.rb	/^    def game_params$/;"	f	class:GamesController
+index	app/controllers/games_controller.rb	/^  def index$/;"	f	class:GamesController
+new	app/controllers/games_controller.rb	/^  def new$/;"	f	class:GamesController
+set_game	app/controllers/games_controller.rb	/^    def set_game$/;"	f	class:GamesController
+show	app/controllers/games_controller.rb	/^  def show$/;"	f	class:GamesController
+update	app/controllers/games_controller.rb	/^  def update$/;"	f	class:GamesController

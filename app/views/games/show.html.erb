@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Deck:</strong>
+  <%= @game.deck %>
+</p>
+
+<p>
+  <strong>Opponent class:</strong>
+  <%= @game.opponent_class %>
+</p>
+
+<p>
+  <strong>Did i win:</strong>
+  <%= @game.did_i_win %>
+</p>
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'game list', games_path %>

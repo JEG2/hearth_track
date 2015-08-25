@@ -1,0 +1,31 @@
+<h1>Listing games</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Deck</th>
+      <th>Opponent class</th>
+      <th>Did i win</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @games.each do |game| %>
+      <tr class="<%= cycle('game_line_even','game_line_odd') %>" >
+        <td class="deck_name" ><%= game.deck %></td>
+        <td><%= game.opponent_class %></td>
+        <td><%= game.did_i_win %></td>
+        <td><%= link_to 'Show', game %></td>
+        <td><%= link_to 'Edit', edit_game_path(game) %></td>
+        <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Game', new_game_path %>
