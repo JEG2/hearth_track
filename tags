@@ -21,6 +21,7 @@ create	app/controllers/games_controller.rb	/^  def create$/;"	f	class:GamesContr
 destroy	app/controllers/games_controller.rb	/^  def destroy$/;"	f	class:GamesController
 edit	app/controllers/games_controller.rb	/^  def edit$/;"	f	class:GamesController
 game_params	app/controllers/games_controller.rb	/^    def game_params$/;"	f	class:GamesController
+graphme	app/controllers/application_controller.rb	/^  def graphme(data)$/;"	f	class:ApplicationController
 index	app/controllers/games_controller.rb	/^  def index$/;"	f	class:GamesController
 new	app/controllers/games_controller.rb	/^  def new$/;"	f	class:GamesController
 set_game	app/controllers/games_controller.rb	/^    def set_game$/;"	f	class:GamesController

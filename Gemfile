@@ -7,6 +7,8 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+gem 'googlecharts', '>= 1.6'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
