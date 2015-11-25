@@ -10,7 +10,16 @@ class DecksController < ApplicationController
   # GET /decks/1
   # GET /decks/1.json
   def show
+    # if request.xhr?
+    #   render json: {"whatever" => "value"}
+    # else
+    #   render
+    # end
   end
+
+  # def address_lookup
+  #   render json: {"whatever" => "value"}
+  # end
 
   # GET /decks/new
   def new

@@ -31,9 +31,8 @@
       </tr>
       <%= form_for :deck do |f| %>
         <%= f.select :deck, options_for_select(@decks.collect { |deck|
-          [deck.deck_name.titleize, deck.id] }, 1), {}, 
-            { :onchange=> '${this_form).submit();',
-              id: 'games_select' } %>
+          [deck.deck_name.titleize, deck.id] }), {include_blank: true}, 
+            { id: 'games_select' } %>
           <%= f.text_field :wins  %>
           <%= f.submit "Go!" %>
           <% end %>
