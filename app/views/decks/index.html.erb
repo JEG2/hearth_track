@@ -1,0 +1,44 @@
+<h1>Listing decks</h1>
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hero class</th>
+      <th>Deck name</th>
+      <th>Version</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @decks.each do |deck| %>
+      <tr>
+        <td><%= deck.hero_class %></td>
+        <td><%= deck.deck_name %></td>
+        <td><%= deck.version %></td>
+        <td><%= link_to 'Edit', edit_deck_path(deck) %></td>
+        <td><%= link_to 'Delete deck', deck, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Game stats', games_path(deck_id: deck) %></td>
+        <td><%= link_to 'Add game', new_game_path(deck_id: deck)  %></td>
+      </tr>
+    <% end %>
+      <tr>
+        <td><%= link_to 'New Deck', new_deck_path %></td>
+      </tr>
+      <%= form_for :deck do |f| %>
+        <%= f.select :deck, options_for_select(@decks.collect { |deck|
+          [deck.deck_name.titleize, deck.id] }, 1), {}, 
+            { :onchange=> '${this_form).submit();',
+              id: 'games_select' } %>
+          <%= f.text_field :wins  %>
+          <%= f.submit "Go!" %>
+          <% end %>
+        </tbody>
+      </table>
+
+      <br>
+

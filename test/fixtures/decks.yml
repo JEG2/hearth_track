@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  hero_class: MyString
+  deck_name: MyString
+  version: 1
+
+two:
+  hero_class: MyString
+  deck_name: MyString
+  version: 1

@@ -1,0 +1,37 @@
+<%= form_for(@deck) do |f| %>
+  <% if @deck.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@deck.errors.count, "error") %> prohibited this deck from being saved:</h2>
+
+      <ul>
+      <% @deck.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table border=1>
+    <tr>
+      <th>Hero class</th>
+      <th>Deck name</th>
+      <th>Version</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>
+        <%= f.select :hero_class, Deck::HEROES %>
+      </td>
+      <td>
+        <%= f.text_field :deck_name %>
+      </td>
+      <td>
+        <%= f.number_field :version %>
+      </td>
+      <td>
+        <%= f.submit %>
+      </td>
+    </tr>
+  </table>
+  <% end %>
+

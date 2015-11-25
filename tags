@@ -5,10 +5,19 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+AddDeckToGame	db/migrate/20150827184612_add_deck_to_game.rb	/^class AddDeckToGame < ActiveRecord::Migration$/;"	c
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:HearthTrack
 ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
 ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+CreateDecks	db/migrate/20150827183237_create_decks.rb	/^class CreateDecks < ActiveRecord::Migration$/;"	c
 CreateGames	db/migrate/20150824192401_create_games.rb	/^class CreateGames < ActiveRecord::Migration$/;"	c
+CurrentDeck	app/controllers/concerns/current_deck.rb	/^module CurrentDeck$/;"	m
+Deck	app/models/deck.rb	/^class Deck < ActiveRecord::Base$/;"	c
+DeckTest	test/models/deck_test.rb	/^class DeckTest < ActiveSupport::TestCase$/;"	c
+DecksController	app/controllers/decks_controller.rb	/^class DecksController < ApplicationController$/;"	c
+DecksControllerTest	test/controllers/decks_controller_test.rb	/^class DecksControllerTest < ActionController::TestCase$/;"	c
+DecksHelper	app/helpers/decks_helper.rb	/^module DecksHelper$/;"	m
+DecksHelperTest	test/helpers/decks_helper_test.rb	/^class DecksHelperTest < ActionView::TestCase$/;"	c
 Game	app/models/game.rb	/^class Game < ActiveRecord::Base$/;"	c
 GameTest	test/models/game_test.rb	/^class GameTest < ActiveSupport::TestCase$/;"	c
 GamesController	app/controllers/games_controller.rb	/^class GamesController < ApplicationController$/;"	c
@@ -17,13 +26,26 @@ GamesHelper	app/helpers/games_helper.rb	/^module GamesHelper$/;"	m
 GamesHelperTest	test/helpers/games_helper_test.rb	/^class GamesHelperTest < ActionView::TestCase$/;"	c
 HearthTrack	config/application.rb	/^module HearthTrack$/;"	m
 change	db/migrate/20150824192401_create_games.rb	/^  def change$/;"	f	class:CreateGames
+change	db/migrate/20150827183237_create_decks.rb	/^  def change$/;"	f	class:CreateDecks
+change	db/migrate/20150827184612_add_deck_to_game.rb	/^  def change$/;"	f	class:AddDeckToGame
+create	app/controllers/decks_controller.rb	/^  def create$/;"	f	class:DecksController
 create	app/controllers/games_controller.rb	/^  def create$/;"	f	class:GamesController
+deck_params	app/controllers/decks_controller.rb	/^    def deck_params$/;"	f	class:DecksController
+destroy	app/controllers/decks_controller.rb	/^  def destroy$/;"	f	class:DecksController
 destroy	app/controllers/games_controller.rb	/^  def destroy$/;"	f	class:GamesController
+edit	app/controllers/decks_controller.rb	/^  def edit$/;"	f	class:DecksController
 edit	app/controllers/games_controller.rb	/^  def edit$/;"	f	class:GamesController
 game_params	app/controllers/games_controller.rb	/^    def game_params$/;"	f	class:GamesController
 graphme	app/controllers/application_controller.rb	/^  def graphme(data)$/;"	f	class:ApplicationController
+index	app/controllers/decks_controller.rb	/^  def index$/;"	f	class:DecksController
 index	app/controllers/games_controller.rb	/^  def index$/;"	f	class:GamesController
+new	app/controllers/decks_controller.rb	/^  def new$/;"	f	class:DecksController
 new	app/controllers/games_controller.rb	/^  def new$/;"	f	class:GamesController
+set_deck	app/controllers/concerns/current_deck.rb	/^    def set_deck$/;"	f	class:CurrentDeck
+set_deck	app/controllers/decks_controller.rb	/^    def set_deck$/;"	f	class:DecksController
 set_game	app/controllers/games_controller.rb	/^    def set_game$/;"	f	class:GamesController
+show	app/controllers/decks_controller.rb	/^  def show$/;"	f	class:DecksController
 show	app/controllers/games_controller.rb	/^  def show$/;"	f	class:GamesController
+update	app/controllers/decks_controller.rb	/^  def update$/;"	f	class:DecksController
 update	app/controllers/games_controller.rb	/^  def update$/;"	f	class:GamesController
+wins	app/models/deck.rb	/^  def wins$/;"	f	class:Deck

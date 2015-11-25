@@ -4,7 +4,11 @@ class GamesController < ApplicationController
   # GET /games
   # GET /games.json
   def index
-    @games = Game.all
+    if params[:deck_id] == nil
+      @games = Game.all
+    else
+      @games = Deck.find(params[:deck_id]).games
+    end
   end
 
   # GET /games/1
@@ -15,7 +19,14 @@ class GamesController < ApplicationController
 
   # GET /games/new
   def new
-    @game = Game.new
+    if params[:deck_id] == nil
+      redirect_to decks_path, :notice => "select or create a deck first"
+      return
+    else
+      session[:deck_id] = params[:deck_id]
+      @deck = Deck.find(params[:deck_id])
+      @game = Game.new
+    end
   end
 
   # GET /games/1/edit
@@ -25,7 +36,9 @@ class GamesController < ApplicationController
   # POST /games
   # POST /games.json
   def create
-    @game = Game.new(game_params)
+    @deck = Deck.find(session[:deck_id])
+    game_params[:deck] = @deck
+    @game = @deck.games.new(game_params)
 
     respond_to do |format|
       if @game.save

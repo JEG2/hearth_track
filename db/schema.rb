@@ -11,14 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150824192401) do
+ActiveRecord::Schema.define(version: 20150827184612) do
+
+  create_table "decks", force: true do |t|
+    t.string   "hero_class"
+    t.string   "deck_name"
+    t.integer  "version"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "games", force: true do |t|
-    t.string   "deck"
     t.string   "opponent_class"
     t.boolean  "did_i_win"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "deck_id"
   end
+
+  add_index "games", ["deck_id"], name: "index_games_on_deck_id"
 
 end

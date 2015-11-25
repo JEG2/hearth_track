@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>HearthTrack</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body class='<%= controller.controller_name %>'>
-
-<%= yield %>
-
-</body>
+  <head>
+    <title>Hearthstone Personal Game Tracker</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body class='<%= controller.controller_name %>'>
+    <div id='banner'>
+      <%= @page_title || "Hearthstone Personal Game Tracker" %>
+    </div>
+    <div id='columns'>
+      <div id='side'>
+        <li><%= link_to 'Games', games_path %></li>
+        <li><%= link_to 'Decks', decks_path %></li>
+      </div>
+      <div id='main'>
+        <%= yield %>
+      </div>
+    </div>
+  </body>
 </html>

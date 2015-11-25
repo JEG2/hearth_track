@@ -19,11 +19,10 @@
     </tr>
     <tr>
       <td>
-        <%= f.text_field :deck %>
+        <%= @deck.deck_name %>
       </td>
       <td>
         <%= f.select :opponent_class, Game::OPPONENTS %>
-        <%= f.label :did_i_win %><br>
       </td>
       <td>
         <%= f.check_box :did_i_win %>

@@ -1,4 +1,6 @@
 HearthTrack::Application.routes.draw do
+  resources :decks
+
   resources :games
 
   root "games#index"
